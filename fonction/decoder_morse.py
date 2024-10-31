@@ -12,3 +12,5 @@ kelimeler = mors_metin.split(' / ')  # Kelimeleri '/' ile ayırıyoruz
 cozum = [''.join(alfabe[harf] for harf in kelime.split()) for kelime in kelimeler]
 print(' '.join(cozum))
 
+print("-------------------")
+
