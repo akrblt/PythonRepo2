@@ -55,7 +55,7 @@ def menu():
         elif choix == "2":
             print(f"Objets disponibles : {OBJET1}, {OBJET2}, {OBJET3},{OBJET4}, {OBJET5}, {OBJET6},{OBJET7}, {OBJET8}")
             objet = input("Quel objet voulez-vous ajouter ? ")
-            if objet in [OBJET1, OBJET2, OBJET3]:
+            if objet in [OBJET1, OBJET2, OBJET3 ,OBJET4,OBJET5,OBJET6,OBJET7,OBJET8]:
                 ajouter_objet(objet)
             else:
                 print("Cet objet n'est pas disponible.")
