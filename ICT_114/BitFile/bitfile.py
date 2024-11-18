@@ -27,7 +27,7 @@ def afficher_inventaire():
 def ajouter_objet(objet):
     """Ajoute un objet à l'inventaire."""
     inventaire.append(objet)
-    print(f"L'objet '{objet}' a été ajouté à l'inventaire.")
+    print(f"L'objet '{objet}' a été ajouté  à l'inventaire.")
 
 
 def supprimer_objet(objet):
@@ -36,7 +36,7 @@ def supprimer_objet(objet):
         inventaire.remove(objet)
         print(f"L'objet '{objet}' a été retiré de l'inventaire.")
     else:
-        print(f"L'objet '{objet}' n'est pas dans l'inventaire.")
+        print(f"L'objet '{objet}' n'est pas  dans l'inventaire.")
 
 
 def menu():
