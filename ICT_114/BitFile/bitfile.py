@@ -34,7 +34,7 @@ def supprimer_objet(objet):
     """Supprime un objet de l'inventaire."""
     if objet in inventaire:
         inventaire.remove(objet)
-        print(f"L'objet '{objet}' a été retiré de l'inventaire.")
+        print(f"L'objet '{objet}' a été retiré  de l'inventaire.")
     else:
         print(f"L'objet '{objet}' n'est pas  dans l'inventaire.")
 
