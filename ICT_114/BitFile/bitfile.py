@@ -1,4 +1,16 @@
+# Déclaration des constantes qui définissent le bitfield
+CUILLERE = 0b00000001  # Bit 0
+FOURCHETTE = 0b00000010  # Bit 1
+COUTEAU = 0b00000100  # Bit 2
+GAMELLE = 0b00001000  # Bit 3
+LAMPE = 0b00010000  # Bit 4
+PINCE = 0b00100000  # Bit 5
+TOURNEVIS = 0b01000000  # Bit 6
+MARTEAU = 0b10000000  # Bit 7
+
+
 # Constantes
+
 OBJET1 = "CUILLERE"
 OBJET2 = "FOURCHETTE"
 OBJET3 = "COUTEAU"
