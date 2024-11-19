@@ -68,7 +68,7 @@ def main():
                 print("Bye...")
                 break
             case _:
-                print("Choix invalide, réessayez.")
+                print("Choix invalide,  réessayez.")
 
 if __name__ == "__main__":
     main()
