@@ -8,9 +8,13 @@ def afficher_message():
     # Récupérer les valeurs des champs d'entrée
     prenom = entry_prenom.get()
     nom = entry_nom.get()
+    age=int(entry_date_naissance.get())
+    print(2025-age)
+
+
     # Modifier le texte du label (2 versions)
-    # label_message.config(text=f"Bonjour {prenom} {nom}")
-    label_message.config(text = "Bonjour " + prenom + " " + nom )
+    label_message.config(text=f"Bonjour {prenom} {nom} , vous auriez {2025-age}")
+    #label_message.config(text = "Bonjour " + prenom + " " + nom + " , vous avez " + str(2025-age))
 
 # Création de la fenêtre principale
 root = tk.Tk()
@@ -31,11 +35,17 @@ entry_prenom = tk.Entry(root)
 entry_prenom.grid(row=1, column=1, padx=10, pady=10)
 entry_prenom.insert(0,"Sam")  # Valeur par défaut pour prénom
 
+label_date_naissance = tk.Label(root, text="Date de naissance :")
+label_date_naissance.grid(row=2, column=0, padx=10, pady=10)
+
+entry_date_naissance = tk.Entry(root)
+entry_date_naissance.grid(row=2, column=1, padx=10, pady=10)
+
 label_message = tk.Label(root, text="", bg="lightblue", width=40, height=2)
-label_message.grid(row=2, column=0, columnspan=2, padx=10, pady=20)
+label_message.grid(row=3, column=0, columnspan=2, padx=10, pady=20)
 
 bouton_afficher = tk.Button(root, text="Afficher", command=afficher_message)
-bouton_afficher.grid(row=3, column=0, columnspan=2, pady=10)
+bouton_afficher.grid(row=4, column=0, columnspan=2, pady=10)
 
 # Boucle principale
 root.mainloop()
