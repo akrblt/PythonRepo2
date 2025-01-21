@@ -4,6 +4,7 @@ a=[1,2,3,4,5,6,7,8,9,0,1,2,3,4,5]
 
 somme=0
 for i in range(len(a)):
+    print(a[i])
     numero = a[i]
 
     if(len(a)-i)%2 == 0:
@@ -14,7 +15,7 @@ for i in range(len(a)):
 print(somme)
 
 dernier_chiffre=10-somme%10
-print(dernier_chiffre)
+print("Derneier ciffre = ",dernier_chiffre)
 
 
 
