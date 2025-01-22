@@ -10,6 +10,7 @@ words= [["tu", "te", "toi"],
         ["vous", "votre", "vos"],
         ["sans", "que", "qui"]]
 
+
 # 2 dimensions list (empty, with labels in the future)
 labels=[[None,None,None],[None,None,None],[None,None,None]]
 
