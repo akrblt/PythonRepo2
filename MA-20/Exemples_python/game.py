@@ -62,7 +62,8 @@ for line in range(len(game)):
         # creation without placement
         labels[line][col] = Label (frm, width=6, height=3, borderwidth=1, relief="solid", font=("Arial", 15))
         # label positionning in the windows
-        labels[line][col].pack (side=LEFT, padx=dx,pady=dy)
+        labels[line][col].pack (side=LEFT, padx=dx, pady=dy)
+        #print(labels[line][col])
 
 display() #texte et couleurs
 
