@@ -47,7 +47,7 @@ win.geometry("800x480")
 win.title(' 2048')
 
 # Title
-lbl_title=Label(win,text="2048", height=3,  font=("Arial", 15))
+lbl_title=Label(win,text="2048", height=3,   font=("Arial", 15))
 lbl_title.pack()
 
 frm_main=Frame(win,bd=5, relief="ridge", bg="lightblue")
