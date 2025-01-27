@@ -53,6 +53,8 @@ lbl_title.pack()
 frm_main=Frame(win,bd=5, relief="ridge", bg="lightblue")
 frm_main.pack()
 
+
+#ce boucle pour le game
 for line in range(len(game)):
     frm= Frame(frm_main)# temporary frame
     frm.pack()
