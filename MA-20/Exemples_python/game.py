@@ -1,6 +1,8 @@
-# labels example
-# JCY jan 2023
-# dynamic creation of labels (pack)
+# 2048
+# Ahmet KARABULUT
+# creation de jeu 2048
+# version 1.0
+# date 28.01.2025
 
 from tkinter import *
 import tkinter.font
@@ -8,9 +10,12 @@ import tkinter.font
 # 2 dimensions list with data
 
 
-game=[[2,2,4,8],[16,32,0,128],[256,512,1024,2048],[4096,8192,2,2]]
+game=[[0,2,4,8],
+      [16,32,2048,128],
+      [256,512,1024,2048],
+      [4096,8192,0,0]]
 colors={
-    0: "#fbf8f8",
+    0: "#ffffff",
     2: "#f7e50c",
     4: "#f5d99e",
     8: "#f7ac78",
@@ -27,7 +32,10 @@ colors={
 }
 
 # 2 dimensions list (empty, with labels in the future)
-labels=[[None,None,None,None],[None,None,None,None],[None,None,None,None],[None,None,None,None]]
+labels=[[None,None,None,None],
+        [None,None,None,None],
+        [None,None,None,None],
+        [None,None,None,None]]
 
 dx=10 # horizontal distance between labels
 dy=10 # vertical distance between labels
@@ -36,15 +44,18 @@ dy=10 # vertical distance between labels
 def display():
     for line in range(len(game)):
         for col in range(len(game[line])):
-            bg_color = colors.get(game[line][col], "#FFFFFF")
-            labels[line][col].config( text=game[line][col], bg=bg_color)
+            bg_color = colors[game[line][col]]
+            if game[line][col] >0:
+                labels[line][col].config( text=game[line][col], bg=bg_color , borderwidth=1)
+            else:
+                labels[line][col].config( text="", bg=bg_color, borderwidth=0)
 
 
 
 # Windows creation
 win = Tk()
 win.geometry("800x480")
-win.title(' 2048')
+win.title('2048')
 
 # Title
 lbl_title=Label(win,text="2048", height=3,   font=("Arial", 15))

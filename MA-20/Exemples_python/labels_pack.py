@@ -8,10 +8,10 @@ import tkinter.font
 # 2 dimensions list with data
 words= [["tu", "te", "toi"],
         ["vous", "votre", "vos"],
-        ["sans", "que", "qui"]]
+        ["sans", "que", "qui"],["1","2","3"]]
 
 # 2 dimensions list (empty, with labels in the future)
-labels=[[None,None,None],[None,None,None],[None,None,None]]
+labels=[[None,None,None],[None,None,None],[None,None,None],[None,None,None]]
 
 dx=10 # horizontal distance between labels
 dy=10 # vertical distance between labels
