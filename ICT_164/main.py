@@ -72,6 +72,7 @@ def generate_sql_from_text():
                     query += f"'{value}',"
             # retirer dernière virgule
             query=query[:-1]
+            #
             #ajouter
             query += ");"
             sql_queries.append(query)
