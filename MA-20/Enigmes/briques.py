@@ -1,6 +1,6 @@
 # recherche de solutions
-# problème des carrés harshad (ex: 2025, carré et divisible par la somme de ses chiffres)
-# JCY pour illustration étudiants
+# problème des briques
+# ahmet
 
 import tkinter as tk
 import bisect
@@ -9,7 +9,7 @@ import time
 import math
 
 
-def find_triangles():
+def find_brique():
     try:
         # Récupérer les bornes min et max
         min_val = int(entry_min.get())
@@ -20,21 +20,25 @@ def find_triangles():
         # Initialiser les compteurs
         start_time = time.time()  # Début du chronomètre
         numbers_tested = 0
-        solutions = []
+        solutions = set()
+
 
 
         # Trouver les triangles rectangles(ex: 2025)
         # Solution brute force un peu stupide
-        for a in range(min_val, max_val + 1):
-            for b in range(a+1, max_val + 1):
-                if math.gcd(a, b) == 1:
-                    numbers_tested += 1
-                    c2=a**2+b**2
-                    c=int(math.sqrt(c2))
-                    if c*c ==c2:
-                        solutions.append((a, b,c))
+        for a in range(1, max_val + 1):
+            for b in range(a, max_val + 1):
+                numbers_tested += 1
+
+                d2 = a ** 2 + b ** 2
+                if math.isqrt(d2) ** 2 == d2:  # (a, b) kenarı tam sayı köşegen oluşturuyor mu?
+                    for c in range(b, max_val + 1):
+                        e2 = a ** 2 + c ** 2
+                        f2 = b ** 2 + c ** 2
 
 
+                        if math.isqrt(e2) ** 2 == e2 and math.isqrt(f2) ** 2 == f2:
+                            solutions.add((a, b, c))
 
         # Calcul du temps d'exécution
         end_time = time.time()
@@ -56,7 +60,7 @@ def find_triangles():
         messagebox.showerror("Erreur", str(e))
 
 
-def find_triangles_vite():
+def find_brique_vite():
     try:
         # Récupérer les bornes min et max
         min_val = int(entry_min.get())
@@ -68,24 +72,31 @@ def find_triangles_vite():
         start_time = time.time()  # Début du chronomètre
         numbers_tested = 0
         solutions = []
-        square=[]
+
 
 
         # Trouver les triangles rectangles(ex: 2025)
         # Solution brute force un peu vite
-        for x in range(min_val, int(max_val * 1.42)):
-            square.append(x ** 2)
 
-        for a in range(min_val, max_val + 1):
+        pythagorean_triples = []
+        max=int(math.sqrt(max_val))
+        for m in range(1, max + 1):
+            for n in range(1, m):
+                if (m - n) % 2 == 1 and math.gcd(m, n) == 1:
+                    a = m ** 2 - n ** 2
+                    b = 2 * m * n
+                    c = m ** 2 + n ** 2
+                    if c <= max_val:
+                        pythagorean_triples.append((a, b, c))
 
-            for b in range(a + 1, max_val + 1):
-                if math.gcd(a, b) == 1:
-                    numbers_tested += 1
-                    c2 = a ** 2 + b ** 2
-                    if square[bisect.bisect_left(square, c2)] == c2:
-                        # if c2 in square:
 
-                        solutions.append((a, b, int(math.sqrt(c2))))
+        for a, b, d in pythagorean_triples:
+            for c in range(1, max_val + 1):
+                numbers_tested += 1
+                if math.isqrt(a ** 2 + c ** 2) ** 2 == a ** 2 + c ** 2 and \
+                        math.isqrt(b ** 2 + c ** 2) ** 2 == b ** 2 + c ** 2 and \
+                        math.isqrt(a ** 2 + b ** 2 + c ** 2) ** 2 == a ** 2 + b ** 2 + c ** 2:
+                    solutions.add(tuple(sorted((a, b, c))))
 
 
 
@@ -127,13 +138,13 @@ def find_triangles_vite():
             for sol in solutions:
                 text_output.insert(tk.END, f"{sol}\n")
         else:
-            text_output.insert(tk.END, "Aucun triange rectangle trouvé.\n")
+            text_output.insert(tk.END, "Aucun brique trouvé.\n")
 
     except ValueError as e:
         messagebox.showerror("Erreur", str(e))
 
 
-def find_triangles_advance():
+def find_brique_advance():
     try:
         # Récupérer les bornes min et max
         min_val = int(entry_min.get())
@@ -145,23 +156,24 @@ def find_triangles_advance():
         start_time = time.time()  # Début du chronomètre
         numbers_tested = 0
         solutions = set()
-        limit_x=int(math.isqrt(math.isqrt(max_val )))
+
 
 
         # Trouver les triangles rectangles(ex: 2025)
         # Solution brute force un peu advancé
 
-
-        for x in range(2, limit_x+1):
-
-            for y in range( 1, x):
-                if x != y:
+        for a in range (1, max_val+1):
+            for b in range (a, max_val+1):
+                for c in range (b, max_val+1):
                     numbers_tested += 1
-                    a=2*x*y
-                    b=x**2 -y**2
-                    c=x**2 + y**2
-                    if a<= max_val and b <= max_val :
-                        solutions.add(tuple(sorted((a, b, c))))
+                    ab=a**2 + b**2
+                    if (math.isqrt(ab)**2 == ab):
+                        bc=c**2 + b**2
+                        if (math.isqrt(bc)**2 == bc):
+                            ac=a**2+c**2
+                            if (math.isqrt(ac)**2 == ac):
+                                solutions.add(tuple((a, b, c)))
+
 
 
 
@@ -226,15 +238,15 @@ entry_min.insert(0, "1")  # Valeur par défaut pour min
 entry_max.insert(0, "10000")  # Valeur par défaut pour max
 
 # Boutons pour calculer
-btn_calculate = tk.Button(root, text="Trouver les triangles rectangles", command=find_triangles)
+btn_calculate = tk.Button(root, text="Trouver les triangles rectangles", command=find_brique)
 btn_calculate.grid(row=2, column=0,  pady=10)
 
 # Boutons pour calculer
-btn_calculate = tk.Button(root, text="Trouver les triangles rectangles vite", command=find_triangles_vite)
+btn_calculate = tk.Button(root, text="Trouver les triangles rectangles vite", command=find_brique_vite)
 btn_calculate.grid(row=2, column=1,  pady=10)
 
 # Boutons pour calculer
-btn_calculate = tk.Button(root, text="Trouver les triangles rectangles advancé", command=find_triangles_advance)
+btn_calculate = tk.Button(root, text="Trouver les triangles rectangles advancé", command=find_brique_advance)
 btn_calculate.grid(row=2, column=2,  pady=10)
 
 

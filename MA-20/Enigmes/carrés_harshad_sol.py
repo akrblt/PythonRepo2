@@ -24,14 +24,12 @@ def find_square_harshad():
         # Trouver les carrés harshad (ex: 2025)
         # Solution brute force un peu stupide
         for a in range(min_val, max_val + 1):
-
             numbers_tested += 1
             square_a = int(math.sqrt(a)) # prendre la racine de a (entière)
             # somme des chiffres
             sum_of_digits=0
             for digit in str(a):
                 sum_of_digits +=int(digit) # calculer la somme des chiffres
-
             if a % sum_of_digits==0 and square_a ** 2 == a: #si carré harshad
                     solutions.append(a)
 
@@ -68,7 +66,21 @@ def find_square_harshad_smart():
         solutions = []
 
         # Trouver carrés harshad
-        # solution plus maline à programmer ici
+        # solution plus maline à programmer ici:
+        # pour n entre int(racine(min)) et int(racine(max))
+        for n in range(int(math.sqrt(min_val)),int(math.sqrt(max_val))+ 1):
+            numbers_tested += 1
+        #   calculer a= n**2
+            a = n**2
+        #   calcul s = somme des chiffres de a
+        # somme des chiffres
+            sum_of_digits=0
+            for digit in str(a):
+                sum_of_digits +=int(digit) # calculer la somme des chiffres
+        #   si a est divisible par s
+            if a % sum_of_digits == 0 :
+        #       ajouter solution
+                solutions.append(a)
 
 
         # Calcul du temps d'exécution
