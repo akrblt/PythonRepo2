@@ -4,4 +4,4 @@ __pycache__/
 .vscode/
 *.log
 *.sqlite
-C107
+*C107
