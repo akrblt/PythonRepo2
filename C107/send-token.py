@@ -9,7 +9,7 @@ sender_address = "0x4b568226882C0BD36c3295c83052D48a1bbC955F"
 private_key = "788efd1ce90209164c07cc625c0ed65c1aff689c22285ef3d00dde28072b5974"  # Remplacez par la clé privée correspondante
 
 # Adresse du destinataire et montant à transférer
-recipient_address = "0xA09101c736b16b3bBc3f9a24Ee6AB30Ad0b917D9"
+recipient_address = "0x4af55Dc30b5e9c61E3bF13b5BB3453ef0D98Aed9"
 amount_in_ether =  0.01 # Montant à envoyer en ETH
 
 try:
