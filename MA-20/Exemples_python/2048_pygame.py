@@ -199,7 +199,7 @@ def lost():
                 if row < 3 and game[row][col] == game[row + 1][col]:
                     return True
         return False
-
+      #   print(game[3][1])
     if not nb_empty_tiles() and not no_merge_possible():
         return True
     return False
