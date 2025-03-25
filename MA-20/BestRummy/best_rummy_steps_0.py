@@ -32,6 +32,8 @@ def find_best(j1, game):
                     used_cards.update(combo)
                     print("new_combinations", [[hex(card) for card in seq] for seq in new_combinations])
 
+
+
         
         for combo in new_combinations:
             for card in combo:

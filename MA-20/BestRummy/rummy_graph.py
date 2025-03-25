@@ -18,6 +18,17 @@ game = [
     [0x33, 0x34, 0x35]
 ]
 
+# Test 1: 4 + 4 + 3 jetons forment des suites à eux tout seuls
+# Données du jeuj1 = [0x9, 0xD, 0x21, 0x22, 0x27, 0x2B, 0x2C, 0x2D]
+j1 = [0x9, 0xA, 0xB, 0xC, 0x21, 0x22, 0x23, 0x2B, 0x2C, 0x2D]
+game = [
+    [0x3, 0x4, 0x5, 0x6],
+    [0x12, 0x13, 0x14],
+    [0x1A, 0x1B, 0x1C]
+]
+
+
+
 
 colors = ["red", "blue", "orange", "black"]
 
@@ -212,7 +223,7 @@ draw_button.pack(side=tk.LEFT)
 best_button = tk.Button(frm_high, text="Best play", command=best_play)
 best_button.pack(side=tk.LEFT)
 
-canvas = tk.Canvas(root, width=1350, height=700, bg="gray")
+canvas = tk.Canvas(root, width=1350, height=900, bg="gray")
 canvas.pack()
 
 draw_game(canvas)
