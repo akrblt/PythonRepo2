@@ -259,3 +259,4 @@ while True:
     update_time()
     pygame.display.update()
     pygame.time.Clock().tick(30)  # Frame rate
+    #print()
