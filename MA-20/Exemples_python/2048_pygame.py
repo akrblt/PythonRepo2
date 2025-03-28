@@ -258,5 +258,6 @@ while True:
     handle_keys()
     update_time()
     pygame.display.update()
+    #pygame.time.Clock().tick(1000)  # Frame rate
     pygame.time.Clock().tick(30)  # Frame rate
     #print()
