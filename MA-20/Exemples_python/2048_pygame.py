@@ -202,6 +202,7 @@ def lost():
       #   print(game[3][1])
     if not nb_empty_tiles() and not no_merge_possible():
         return True
+    #print(no_merge_possible())
     return False
 
 
