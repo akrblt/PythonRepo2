@@ -18,6 +18,9 @@ label_title = Label(win, text="Login", font=("Arial", 30), bg="#FFFFFF", fg="#00
 add_spacer(2)
 label_title.pack(pady=10)
 
+#add_spacer(2)
+#label_title.pack(pady=10)
+
 # Email label and entry
 email_label = Label(win, text="Enter your email", font=("Arial", 15), bg="#FFFFFF", fg="#000000")
 email_label.pack(pady=(30, 5))
