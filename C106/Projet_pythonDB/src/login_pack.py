@@ -14,7 +14,7 @@ def add_spacer(height):
     spacer.pack()
 
 # Title
-label_title = Label(win, text="Login", font=("Arial", 30), bg="#FFFFFF", fg="#000000")
+label_title = Label(win, text="Login", font=("Arial", 50), bg="#FFFFFF", fg="#000000")
 add_spacer(2)
 label_title.pack(pady=10)
 
@@ -22,7 +22,8 @@ label_title.pack(pady=10)
 #label_title.pack(pady=10)
 
 # Email label and entry
-email_label = Label(win, text="Enter your email", font=("Arial", 15), bg="#FFFFFF", fg="#000000")
+email_label = Label(win, text="Enter your email", font=("Arial", 20), bg="#FFFFFF", fg="#000000")
+# configurer le font
 email_label.pack(pady=(30, 5))
 
 email_entry = Entry(win, width=40)
