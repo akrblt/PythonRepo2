@@ -4,6 +4,7 @@ t=turtle.Turtle()
 
 t.pencolor("red")
 t.pensize(3)
+t.write("Bonjour !", font=("Arial", 24, "bold"))
 for i in range(100) :
     t.forward(200)
     t.right(90)
