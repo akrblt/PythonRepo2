@@ -26,9 +26,9 @@ head.direction = "stop" # Définit la direction initiale à "stop", donc pas de 
 # Nourriture
 food = turtle.Turtle() # crée un nourriture
 food.speed(0) # crée rapide
-food.shape("square") # change la forme de nourriture
-food.color("black")
-food.penup()
+food.shape("circle") # change la forme de nourriture
+food.color("red")
+#food.penup()
 food.goto(0, 100) # Place la nourriture à la position (0, 100) sur l’écran.
 
 # Corps du serpent
@@ -109,7 +109,7 @@ while True: # boucle infini , le coeur du jeu , tourne sans arret
         segments.append(new_segment) # Le segment est ajouté à la liste du corps du serpent.
 
     # deplacer segmets
-    for i in (range(1, len(segments))): # Génère les indices des segments, à partir de 1 jusqu'à la fin de la liste.
+    for i in reversed(range(1, len(segments))): # Génère les indices des segments, à partir de 1 jusqu'à la fin de la liste.
         # si on a 4 segments, on obtient [1, 2, 3].  reversed [3,2,1] On boucle du dernier segment vers le premier.
         segments[i].goto(segments[i - 1].pos()) # Chaque segment va se déplacer à la position du segment juste avant lui.
         # par example
@@ -123,7 +123,7 @@ while True: # boucle infini , le coeur du jeu , tourne sans arret
         segments[0].goto(head.pos())
 
     # déplacer la tête du serpent
-    move()
+    move() # line 56
 
     # Collision avec soi-même
     for segment in segments:
