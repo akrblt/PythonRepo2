@@ -14,7 +14,7 @@ for i in range(100) :
         t.right(135)
     if(i%3==0):
         t.pencolor("orange")
-        t.begin_fill()
+       # t.begin_fill()
     if(i%5==0):
         t.pencolor("yellow")
 
