@@ -31,7 +31,7 @@ food.color("red")
 #food.penup()
 food.goto(0, 100) # Place la nourriture à la position (0, 100) sur l’écran.
 
-# Corps du serpent
+# creation de corps du serpent
 segments = []
 
 
