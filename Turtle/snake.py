@@ -19,7 +19,7 @@ head = turtle.Turtle() # crée un nouve object pour la tete de serpent
 head.speed(0) # Définit la vitesse maximale d'animation (instantanée). 0 signifie "pas d’animation", pour une exécution rapide.
 head.shape("square") # Change la forme de la tortue en carré.
 head.color("green")
-#head.penup()  # permet de effacer le trace
+head.penup()  # permet de effacer le trace
 head.goto(0, 0) # Place la tête du serpent au centre de l'écran.
 head.direction = "stop" # Définit la direction initiale à "stop", donc pas de mouvement au début.
 
@@ -28,10 +28,11 @@ food = turtle.Turtle() # crée un nourriture
 food.speed(0) # crée rapide
 food.shape("circle") # change la forme de nourriture
 food.color("red")
-#food.penup()
+food.penup()
 food.goto(0, 100) # Place la nourriture à la position (0, 100) sur l’écran.
 
 # creation de corps du serpent
+# body creat
 segments = []
 
 
