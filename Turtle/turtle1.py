@@ -22,7 +22,7 @@ for i in range(100) :
 
     else:
 
-        t.pencolor("green")
+        t.pencolor("bleu")
         t.end_fill()
 
 
