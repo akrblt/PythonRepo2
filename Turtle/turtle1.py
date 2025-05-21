@@ -23,6 +23,7 @@ for i in range(100) :
     else:
 
         t.pencolor("bleu")
+        t.pensize(5)
         t.end_fill()
 
 
