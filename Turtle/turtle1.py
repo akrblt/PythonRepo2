@@ -24,6 +24,7 @@ for i in range(100) :
 
         t.pencolor("bleu")
         t.pensize(5)
+        t.pencolor("pink")
         t.end_fill()
 
 
