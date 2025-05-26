@@ -17,8 +17,8 @@ ws.tracer(0) # desactive raffaichissement automatique de l'ecran . on met à jou
 # Serpent (tête)
 head = turtle.Turtle() # crée un nouve object pour la tete de serpent
 head.speed(0) # Définit la vitesse maximale d'animation (instantanée). 0 signifie "pas d’animation", pour une exécution rapide.
-head.shape("square") # Change la forme de la tortue en carré.
-head.color("green")
+head.shape("carre") # Change la forme de la tortue en carré.
+head.color("black")
 head.penup()  # permet de effacer le trace
 head.goto(0, 0) # Place la tête du serpent au centre de l'écran.
 head.direction = "stop" # Définit la direction initiale à "stop", donc pas de mouvement au début.
@@ -97,7 +97,7 @@ while True: # boucle infini , le coeur du jeu , tourne sans arret
 
 
     # Collision avec nourriture
-    if head.distance(food) < 20: # Si la tête du serpent est à moins de 20 pixels de la nourriture, cela signifie qu’il l’a mangée.
+    if head.distance(food) < 20:  #  Si la tête du serpent est à moins de 20 pixels de la nourriture, cela signifie qu’il l’a mangée.
         x = random.randint(-280, 280) # On choisit une position aléatoire pour la nourriture, entre -280 et 280 sur chaque axe.
         y = random.randint(-280, 280)
         food.goto(x, y) # La nourriture est déplacée vers cette nouvelle position aléatoire.
