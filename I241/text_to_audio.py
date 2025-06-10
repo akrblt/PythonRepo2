@@ -9,12 +9,12 @@ if not os.path.exists(nom_du_dossier):
     os.makedirs(nom_du_dossier)
 
 # Texte 1
-texte_1 = "Ohhh Mon Dieu !  Tu me fais peur ! Heureusement c’est que le test. Je vais vérifier mon compte dans l’app."
+texte_1 = "Calme-toi ! Ne t’inquiète pas ! Ce mail est un test de ma part."
 
 # Texte 2
 texte_2 = """
 Oui, tu as eu de la chance cette fois-ci ! Ce test te permet de savoir qu’il ne faut pas cliquer sur tous les liens que tu reçois par mail.
-Je suis Papa IA. J’analyse des millions de modèles de fraude, j’apprends chaque jour et veille à ce que les mails malicieux ne te piègent pas. 
+Je suis Mami  IA. J’analyse des millions de modèles de fraude, j’apprends chaque jour et veille à ce que les mails malicieux ne te piègent pas. 
 De temps en temps je fais aussi des tests pour mettre en garde des utilisateurs.
 """
 
