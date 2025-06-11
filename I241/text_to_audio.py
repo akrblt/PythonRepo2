@@ -18,6 +18,12 @@ Je suis Mami  IA. J’analyse des millions de modèles de fraude, j’apprends c
 De temps en temps je fais aussi des tests pour mettre en garde des utilisateurs.
 """
 
+texte_3="""
+Non, ohhhhhhhh , 
+
+
+"""
+
 # Chemins des fichiers audio
 chemin_fichier_1 = os.path.join(nom_du_dossier, "message_1.mp3")
 chemin_fichier_2 = os.path.join(nom_du_dossier, "message_2.mp3")
