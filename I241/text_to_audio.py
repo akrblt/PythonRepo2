@@ -25,6 +25,8 @@ Non, ohhhhhhhh ,
 """
 texte_4 = "OUi, oui,oui...."
 
+texte_5="ohhh nonnn noooonnnnnnnnnnnnn"
+
 
 # Chemins des fichiers audio
 chemin_fichier_1 = os.path.join(nom_du_dossier, "message_1.mp3")
